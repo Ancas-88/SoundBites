@@ -34,10 +34,6 @@ builder.Services.AddTransient<IDbConnection>(sp =>
     new SqlConnection(builder.Configuration.GetConnectionString("connectionDB")));
 builder.Services.AddScoped<UsuarioRepository>();
 builder.Services.AddScoped<CategoriaRepository>();
-builder.Services.AddScoped<FavoritoRepository>();
-builder.Services.AddScoped<GeneroRepository>();
-builder.Services.AddScoped<PlatoRepository>();
-builder.Services.AddScoped<VotoRepository>();
 
 var app = builder.Build();
 
